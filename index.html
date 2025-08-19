@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Primera "Tienda" 2.0 - Material Radiológico</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>RadShop²</h1>
+      <nav>
+        <a href="#productos">Productos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main class="principal">
+      <!-- FILTROS -->
+      <aside class="filtros">
+        <h2>Filtrar</h2>
+
+        <div class="seccion-filtros">
+          <label for="search">Buscar producto</label>
+          <input type="search" id="search" placeholder="Detector…" />
+        </div>
+
+        <fieldset class="seccion-filtros">
+          <legend>Tipo de producto</legend>
+          <label>
+            <input type="checkbox" name="tipo" value="detector" />
+            Detectores DR
+          </label>
+          <label>
+            <input type="checkbox" name="tipo" value="proteccion" />
+            Protección personal
+          </label>
+          <label>
+            <input type="checkbox" name="tipo" value="equipo" />
+            Equipos RX
+          </label>
+          <label>
+            <input type="checkbox" name="tipo" value="dosimetria" />
+            Dosimetría
+          </label>
+        </fieldset>
+
+        <div class="seccion-filtros">
+          <label for="precio">Precio máximo (€)</label>
+          <input type="range" id="precio" min="0" max="20000" value="20000" />
+          <small id="precioValor">Hasta 20.000 €</small>
+        </div>
+      </aside>
+
+      <!-- PRODUCTOS -->
+      <section class="products" id="productos">
+        <ul class="product-grid" id="grid">
+          <!-- Aquí aparecen los productos -->
+        </ul>
+        <p id="sinResultados" class="sinResultados" hidden>
+          No hay productos que coincidan con los filtros.
+        </p>
+      </section>
+    </main>
+
+    <footer id="contacto">
+      <p>
+        &copy; 2025 RadShop · Para equipos de Rayos, Radioterapia y Medicina
+        Nuclear
+      </p>
+    </footer>
+    <script src="DOM.js"></script>
+  </body>
+</html>
